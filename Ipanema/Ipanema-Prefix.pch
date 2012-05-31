@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'Ipanema' target in the 'Ipanema' project
+//
+
+#ifdef __OBJC__
+	#import <Cocoa/Cocoa.h>
+#endif

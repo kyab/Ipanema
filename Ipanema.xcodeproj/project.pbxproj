@@ -1,0 +1,338 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EB197E811577D25300BCD187 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB197E801577D25300BCD187 /* Cocoa.framework */; };
+		EB197E831577D25300BCD187 /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB197E821577D25300BCD187 /* MacRuby.framework */; };
+		EB197E8A1577D25300BCD187 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EB197E881577D25300BCD187 /* InfoPlist.strings */; };
+		EB197E8C1577D25300BCD187 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB197E8B1577D25300BCD187 /* main.m */; };
+		EB197E911577D25300BCD187 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB197E8F1577D25300BCD187 /* MainMenu.xib */; };
+		EB197E941577D25300BCD187 /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = EB197E931577D25300BCD187 /* rb_main.rb */; };
+		EB197E961577D25300BCD187 /* AppDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = EB197E951577D25300BCD187 /* AppDelegate.rb */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EB197E7C1577D25300BCD187 /* Ipanema.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ipanema.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB197E801577D25300BCD187 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		EB197E821577D25300BCD187 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = DEVELOPER_DIR; };
+		EB197E871577D25300BCD187 /* Ipanema-Info.plist */ = {isa = PBXFileReference; path = "Ipanema-Info.plist"; sourceTree = "<group>"; };
+		EB197E891577D25300BCD187 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EB197E8B1577D25300BCD187 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EB197E8D1577D25300BCD187 /* Ipanema-Prefix.pch */ = {isa = PBXFileReference; path = "Ipanema-Prefix.pch"; sourceTree = "<group>"; };
+		EB197E901577D25300BCD187 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		EB197E931577D25300BCD187 /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
+		EB197E951577D25300BCD187 /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EB197E791577D25300BCD187 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB197E811577D25300BCD187 /* Cocoa.framework in Frameworks */,
+				EB197E831577D25300BCD187 /* MacRuby.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EB197E711577D25200BCD187 = {
+			isa = PBXGroup;
+			children = (
+				EB197E851577D25300BCD187 /* Ipanema */,
+				EB197E7F1577D25300BCD187 /* Frameworks */,
+				EB197E7D1577D25300BCD187 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EB197E7D1577D25300BCD187 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EB197E7C1577D25300BCD187 /* Ipanema.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EB197E7F1577D25300BCD187 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB197E801577D25300BCD187 /* Cocoa.framework */,
+				EB197E821577D25300BCD187 /* MacRuby.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EB197E851577D25300BCD187 /* Ipanema */ = {
+			isa = PBXGroup;
+			children = (
+				EB197E951577D25300BCD187 /* AppDelegate.rb */,
+				EB197E8E1577D25300BCD187 /* Resources */,
+				EB197E921577D25300BCD187 /* Other Sources */,
+				EB197E861577D25300BCD187 /* Supporting Files */,
+			);
+			path = Ipanema;
+			sourceTree = "<group>";
+		};
+		EB197E861577D25300BCD187 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EB197E871577D25300BCD187 /* Ipanema-Info.plist */,
+				EB197E881577D25300BCD187 /* InfoPlist.strings */,
+				EB197E8B1577D25300BCD187 /* main.m */,
+				EB197E8D1577D25300BCD187 /* Ipanema-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EB197E8E1577D25300BCD187 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EB197E8F1577D25300BCD187 /* MainMenu.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		EB197E921577D25300BCD187 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				EB197E931577D25300BCD187 /* rb_main.rb */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		EB197E841577D25300BCD187 /* Deployment */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "--compile --embed";
+			buildConfigurationList = EB197E9C1577D25300BCD187 /* Build configuration list for PBXLegacyTarget "Deployment" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/local/bin/macruby_deploy;
+			dependencies = (
+			);
+			name = Deployment;
+			passBuildSettingsInEnvironment = 1;
+			productName = Deployment;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		EB197E7B1577D25300BCD187 /* Ipanema */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB197E991577D25300BCD187 /* Build configuration list for PBXNativeTarget "Ipanema" */;
+			buildPhases = (
+				EB197E781577D25300BCD187 /* Sources */,
+				EB197E791577D25300BCD187 /* Frameworks */,
+				EB197E7A1577D25300BCD187 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Ipanema;
+			productName = Ipanema;
+			productReference = EB197E7C1577D25300BCD187 /* Ipanema.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EB197E731577D25200BCD187 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = EB197E761577D25200BCD187 /* Build configuration list for PBXProject "Ipanema" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EB197E711577D25200BCD187;
+			productRefGroup = EB197E7D1577D25300BCD187 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EB197E7B1577D25300BCD187 /* Ipanema */,
+				EB197E841577D25300BCD187 /* Deployment */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EB197E7A1577D25300BCD187 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB197E8A1577D25300BCD187 /* InfoPlist.strings in Resources */,
+				EB197E911577D25300BCD187 /* MainMenu.xib in Resources */,
+				EB197E941577D25300BCD187 /* rb_main.rb in Resources */,
+				EB197E961577D25300BCD187 /* AppDelegate.rb in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EB197E781577D25300BCD187 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB197E8C1577D25300BCD187 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EB197E881577D25300BCD187 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB197E891577D25300BCD187 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EB197E8F1577D25300BCD187 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB197E901577D25300BCD187 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EB197E971577D25300BCD187 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		EB197E981577D25300BCD187 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		EB197E9A1577D25300BCD187 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Ipanema/Ipanema-Prefix.pch";
+				INFOPLIST_FILE = "Ipanema/Ipanema-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EB197E9B1577D25300BCD187 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Ipanema/Ipanema-Prefix.pch";
+				INFOPLIST_FILE = "Ipanema/Ipanema-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		EB197E9D1577D25300BCD187 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		EB197E9E1577D25300BCD187 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EB197E761577D25200BCD187 /* Build configuration list for PBXProject "Ipanema" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB197E971577D25300BCD187 /* Debug */,
+				EB197E981577D25300BCD187 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB197E991577D25300BCD187 /* Build configuration list for PBXNativeTarget "Ipanema" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB197E9A1577D25300BCD187 /* Debug */,
+				EB197E9B1577D25300BCD187 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EB197E9C1577D25300BCD187 /* Build configuration list for PBXLegacyTarget "Deployment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB197E9D1577D25300BCD187 /* Debug */,
+				EB197E9E1577D25300BCD187 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EB197E731577D25200BCD187 /* Project object */;
+}
