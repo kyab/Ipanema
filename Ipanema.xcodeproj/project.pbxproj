@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB0CCED6157FA0A1004AA327 /* Song.rb in Resources */ = {isa = PBXBuildFile; fileRef = EB0CCED5157FA0A1004AA327 /* Song.rb */; };
+		EB0CCED9157FA448004AA327 /* Player.rb in Resources */ = {isa = PBXBuildFile; fileRef = EB0CCED8157FA448004AA327 /* Player.rb */; };
 		EB197E811577D25300BCD187 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB197E801577D25300BCD187 /* Cocoa.framework */; };
 		EB197E831577D25300BCD187 /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB197E821577D25300BCD187 /* MacRuby.framework */; };
 		EB197E8A1577D25300BCD187 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EB197E881577D25300BCD187 /* InfoPlist.strings */; };
@@ -14,19 +16,36 @@
 		EB197E911577D25300BCD187 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB197E8F1577D25300BCD187 /* MainMenu.xib */; };
 		EB197E941577D25300BCD187 /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = EB197E931577D25300BCD187 /* rb_main.rb */; };
 		EB197E961577D25300BCD187 /* AppDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = EB197E951577D25300BCD187 /* AppDelegate.rb */; };
+		EB197EA01577D27000BCD187 /* Controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = EB197E9F1577D27000BCD187 /* Controller.rb */; };
+		EB197EAF1578FB3100BCD187 /* MyScheduler.mm in Sources */ = {isa = PBXBuildFile; fileRef = EB197EA91578FB3100BCD187 /* MyScheduler.mm */; };
+		EB197EB01578FB3100BCD187 /* AudioOutputEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = EB197EAB1578FB3100BCD187 /* AudioOutputEngine.m */; };
+		EB197EB11578FB3100BCD187 /* SoundDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = EB197EAE1578FB3100BCD187 /* SoundDelegate.mm */; };
+		EB197EB41578FB6700BCD187 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB197EB31578FB6700BCD187 /* AudioUnit.framework */; };
+		EB197EB61578FB7700BCD187 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB197EB51578FB7700BCD187 /* CoreAudio.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EB0CCED5157FA0A1004AA327 /* Song.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Song.rb; sourceTree = "<group>"; };
+		EB0CCED8157FA448004AA327 /* Player.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Player.rb; sourceTree = "<group>"; };
 		EB197E7C1577D25300BCD187 /* Ipanema.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ipanema.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB197E801577D25300BCD187 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		EB197E821577D25300BCD187 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = DEVELOPER_DIR; };
-		EB197E871577D25300BCD187 /* Ipanema-Info.plist */ = {isa = PBXFileReference; path = "Ipanema-Info.plist"; sourceTree = "<group>"; };
+		EB197E871577D25300BCD187 /* Ipanema-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Ipanema-Info.plist"; sourceTree = "<group>"; };
 		EB197E891577D25300BCD187 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EB197E8B1577D25300BCD187 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		EB197E8D1577D25300BCD187 /* Ipanema-Prefix.pch */ = {isa = PBXFileReference; path = "Ipanema-Prefix.pch"; sourceTree = "<group>"; };
+		EB197E8D1577D25300BCD187 /* Ipanema-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Ipanema-Prefix.pch"; sourceTree = "<group>"; };
 		EB197E901577D25300BCD187 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		EB197E931577D25300BCD187 /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
 		EB197E951577D25300BCD187 /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
+		EB197E9F1577D27000BCD187 /* Controller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Controller.rb; sourceTree = "<group>"; };
+		EB197EA91578FB3100BCD187 /* MyScheduler.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyScheduler.mm; sourceTree = "<group>"; };
+		EB197EAA1578FB3100BCD187 /* MyScheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyScheduler.h; sourceTree = "<group>"; };
+		EB197EAB1578FB3100BCD187 /* AudioOutputEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioOutputEngine.m; sourceTree = "<group>"; };
+		EB197EAC1578FB3100BCD187 /* AudioOutputEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioOutputEngine.h; sourceTree = "<group>"; };
+		EB197EAD1578FB3100BCD187 /* SoundDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundDelegate.h; sourceTree = "<group>"; };
+		EB197EAE1578FB3100BCD187 /* SoundDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SoundDelegate.mm; sourceTree = "<group>"; };
+		EB197EB31578FB6700BCD187 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		EB197EB51578FB7700BCD187 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +53,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB197EB61578FB7700BCD187 /* CoreAudio.framework in Frameworks */,
+				EB197EB41578FB6700BCD187 /* AudioUnit.framework in Frameworks */,
 				EB197E811577D25300BCD187 /* Cocoa.framework in Frameworks */,
 				EB197E831577D25300BCD187 /* MacRuby.framework in Frameworks */,
 			);
@@ -62,6 +83,8 @@
 		EB197E7F1577D25300BCD187 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EB197EB51578FB7700BCD187 /* CoreAudio.framework */,
+				EB197EB31578FB6700BCD187 /* AudioUnit.framework */,
 				EB197E801577D25300BCD187 /* Cocoa.framework */,
 				EB197E821577D25300BCD187 /* MacRuby.framework */,
 			);
@@ -72,6 +95,15 @@
 			isa = PBXGroup;
 			children = (
 				EB197E951577D25300BCD187 /* AppDelegate.rb */,
+				EB197E9F1577D27000BCD187 /* Controller.rb */,
+				EB0CCED5157FA0A1004AA327 /* Song.rb */,
+				EB0CCED8157FA448004AA327 /* Player.rb */,
+				EB197EA91578FB3100BCD187 /* MyScheduler.mm */,
+				EB197EAA1578FB3100BCD187 /* MyScheduler.h */,
+				EB197EAB1578FB3100BCD187 /* AudioOutputEngine.m */,
+				EB197EAC1578FB3100BCD187 /* AudioOutputEngine.h */,
+				EB197EAD1578FB3100BCD187 /* SoundDelegate.h */,
+				EB197EAE1578FB3100BCD187 /* SoundDelegate.mm */,
 				EB197E8E1577D25300BCD187 /* Resources */,
 				EB197E921577D25300BCD187 /* Other Sources */,
 				EB197E861577D25300BCD187 /* Supporting Files */,
@@ -177,6 +209,9 @@
 				EB197E911577D25300BCD187 /* MainMenu.xib in Resources */,
 				EB197E941577D25300BCD187 /* rb_main.rb in Resources */,
 				EB197E961577D25300BCD187 /* AppDelegate.rb in Resources */,
+				EB197EA01577D27000BCD187 /* Controller.rb in Resources */,
+				EB0CCED6157FA0A1004AA327 /* Song.rb in Resources */,
+				EB0CCED9157FA448004AA327 /* Player.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,6 +223,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB197E8C1577D25300BCD187 /* main.m in Sources */,
+				EB197EAF1578FB3100BCD187 /* MyScheduler.mm in Sources */,
+				EB197EB01578FB3100BCD187 /* AudioOutputEngine.m in Sources */,
+				EB197EB11578FB3100BCD187 /* SoundDelegate.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +361,7 @@
 				EB197E9B1577D25300BCD187 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EB197E9C1577D25300BCD187 /* Build configuration list for PBXLegacyTarget "Deployment" */ = {
 			isa = XCConfigurationList;
@@ -331,6 +370,7 @@
 				EB197E9E1577D25300BCD187 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
