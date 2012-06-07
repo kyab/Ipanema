@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		EB0CCED6157FA0A1004AA327 /* Song.rb in Resources */ = {isa = PBXBuildFile; fileRef = EB0CCED5157FA0A1004AA327 /* Song.rb */; };
 		EB0CCED9157FA448004AA327 /* Player.rb in Resources */ = {isa = PBXBuildFile; fileRef = EB0CCED8157FA448004AA327 /* Player.rb */; };
+		EB0CCEDF1580DB2B004AA327 /* ChordParser.rb in Resources */ = {isa = PBXBuildFile; fileRef = EB0CCEDE1580DB2B004AA327 /* ChordParser.rb */; };
+		EB0CCEE21580E466004AA327 /* BaseClasses.rb in Resources */ = {isa = PBXBuildFile; fileRef = EB0CCEE11580E466004AA327 /* BaseClasses.rb */; };
 		EB197E811577D25300BCD187 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB197E801577D25300BCD187 /* Cocoa.framework */; };
 		EB197E831577D25300BCD187 /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB197E821577D25300BCD187 /* MacRuby.framework */; };
 		EB197E8A1577D25300BCD187 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EB197E881577D25300BCD187 /* InfoPlist.strings */; };
@@ -27,6 +29,8 @@
 /* Begin PBXFileReference section */
 		EB0CCED5157FA0A1004AA327 /* Song.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Song.rb; sourceTree = "<group>"; };
 		EB0CCED8157FA448004AA327 /* Player.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Player.rb; sourceTree = "<group>"; };
+		EB0CCEDE1580DB2B004AA327 /* ChordParser.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = ChordParser.rb; sourceTree = "<group>"; };
+		EB0CCEE11580E466004AA327 /* BaseClasses.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = BaseClasses.rb; sourceTree = "<group>"; };
 		EB197E7C1577D25300BCD187 /* Ipanema.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ipanema.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB197E801577D25300BCD187 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		EB197E821577D25300BCD187 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = DEVELOPER_DIR; };
@@ -96,8 +100,10 @@
 			children = (
 				EB197E951577D25300BCD187 /* AppDelegate.rb */,
 				EB197E9F1577D27000BCD187 /* Controller.rb */,
-				EB0CCED5157FA0A1004AA327 /* Song.rb */,
+				EB0CCEDE1580DB2B004AA327 /* ChordParser.rb */,
+				EB0CCEE11580E466004AA327 /* BaseClasses.rb */,
 				EB0CCED8157FA448004AA327 /* Player.rb */,
+				EB0CCED5157FA0A1004AA327 /* Song.rb */,
 				EB197EA91578FB3100BCD187 /* MyScheduler.mm */,
 				EB197EAA1578FB3100BCD187 /* MyScheduler.h */,
 				EB197EAB1578FB3100BCD187 /* AudioOutputEngine.m */,
@@ -181,6 +187,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "kyab soft";
 			};
 			buildConfigurationList = EB197E761577D25200BCD187 /* Build configuration list for PBXProject "Ipanema" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -212,6 +219,8 @@
 				EB197EA01577D27000BCD187 /* Controller.rb in Resources */,
 				EB0CCED6157FA0A1004AA327 /* Song.rb in Resources */,
 				EB0CCED9157FA448004AA327 /* Player.rb in Resources */,
+				EB0CCEDF1580DB2B004AA327 /* ChordParser.rb in Resources */,
+				EB0CCEE21580E466004AA327 /* BaseClasses.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,13 +276,14 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "";
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -288,12 +298,13 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_CFLAGS = "";
 				SDKROOT = macosx;
 			};
 			name = Release;

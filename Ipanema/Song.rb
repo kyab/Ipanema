@@ -12,9 +12,10 @@ mml ("o5l4 e4. c#8 c# <b8 >e2 c#8 c# <b4" <<
 		"f1^8 f#4 f8 d#8 f4 d#8 c#4. d#8^1." ) 
 
 	
-#chords <<-END
-#	"C#m7 - Am7"
-#END
+#TODO:
+chords <<-END
+	C#m7 - Am7
+END
 	
 onTick(1000) do 
 	puts "current Tick = 1000"

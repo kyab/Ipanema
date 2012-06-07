@@ -9,7 +9,11 @@ def mml(str)
 	Player.parsemml(str)
 end
 
-def track(trackNumber)
+def track(trackNumber, &block)
+end
+
+def chords(str)
+	Player.parseChords(str)
 end
 #-------------------------------------------
 	

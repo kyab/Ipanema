@@ -22,7 +22,7 @@ public:
 	}
 	
 	float gen(){
-		float val = 1.0 - (1 / speed_) * frame_/SAMPLING_RATE;
+		float val = (float) (1.0 - (1 / speed_) * frame_/SAMPLING_RATE);
 		frame_++;
 		if (val < 0.0){
 			return 0;
@@ -44,10 +44,10 @@ public:
 	}
 	
 	float gen(){
-		float val = (1/speed_) * frame_ / SAMPLING_RATE;
+		float val = (float) ( (1/speed_) * frame_ / SAMPLING_RATE);
 		frame_ ++;
-		if (val > 1.0){
-			return 1.0;
+		if (val > 1.0f){
+			return 1.0f;
 		}else{
 			return val;
 		}
@@ -60,7 +60,7 @@ private:
 
 class SinWaveGenerator{
 public:
-	SinWaveGenerator(int freq, float gain) : upRamp_(0.002), downRamp_(0.2){
+	SinWaveGenerator(int freq, float gain) : upRamp_(0.002f), downRamp_(0.2f){
 		freq_ = freq;
 		gain_ = gain;
 		frame_ = 0;
@@ -71,9 +71,9 @@ public:
 	
 	float gen(){
 
-		float current_sec = 1.0 * frame_ / SAMPLING_RATE;
-		float omega = 2 * M_PI * freq_;
-		float val =gain_* cos( omega * current_sec);
+		float current_sec = 1.0f * frame_ / SAMPLING_RATE;
+		float omega = 2.0f * (float)M_PI * freq_;
+		float val =(float) (gain_* cos( omega * current_sec));
 		
 		val *= upRamp_.gen();
 		
@@ -138,9 +138,9 @@ public:
 	void noteOn(Byte noteNumber, Byte velocity){
 		const float base = 440.0f;
 		const float keisuu = 1.0594630943593f;
-		float freq = base * pow(keisuu,noteNumber - 60);
+		float freq = (float) (base * pow(keisuu,noteNumber - 60));
 		
-		SinWaveGenerator *sin = new SinWaveGenerator(freq, 0.1);
+		SinWaveGenerator *sin = new SinWaveGenerator(freq, 0.1f);
 		notes_.insert(std::make_pair(noteNumber, sin)); 
 		
 		//NSLog(@"notes count = %lu", notes_.size());

@@ -1,37 +1,5 @@
-
-class Note 
-	attr_accessor :noteNumber , :length , :startTick
-	def initialize(noteNumber,length, startTick)
-		@noteNumber = noteNumber
-		@length = length
-		@startTick = startTick
-	end
-end
-
-class Event
-	#attr_accessor :tick
-	
-	def <=>(other)
-		self.tick <=>other.tick
-	end
-end
-
-class NoteEvent < Event
-	attr_accessor :noteNumber, :type ,:tick
-	def initialize (noteNumber, type, tick)
-		@noteNumber = noteNumber
-		@type = type
-		@tick = tick
-	end
-end
-
-class ProcEvent < Event
-	attr_accessor :tick, :block
-	def initialize (tick, block)
-		@block = block
-		@tick = tick
-	end
-end
+require "ChordParser.rb"
+require "BaseClasses.rb"
 
 class Util
 	def self.noteName2NoteNumber(base, noteName)
@@ -76,10 +44,6 @@ class Player
 		render2events
 		sortEvents
 		startPlay
-	end
-	
-	def self.sortEvents
-		p $events.sort!	
 	end
 	
 	def self.startPlay		
@@ -130,10 +94,21 @@ class Player
 		end
 	end
 
-
 	def self.addEvent(tick,block)
 		$events << ProcEvent.new(tick, block)
 	end
+	
+	def self.sortEvents
+		p $events.sort!	
+	end
+	
+
+	
+	def self.parseChords(str)
+		chords = ChordsExtractor.new(str).chords
+		$notes += chords2Notes(chords)
+	end
+		
 	
 	#super long and ugly function! REFACTOR ME!!!!!!
 	def self.parsemml(str)
