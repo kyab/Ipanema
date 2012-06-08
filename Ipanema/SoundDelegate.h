@@ -138,7 +138,7 @@ public:
 	void noteOn(Byte noteNumber, Byte velocity){
 		const float base = 440.0f;
 		const float keisuu = 1.0594630943593f;
-		float freq = (float) (base * pow(keisuu,noteNumber - 60));
+		float freq = (float) (base * pow(keisuu,noteNumber - 57));
 		
 		SinWaveGenerator *sin = new SinWaveGenerator(freq, 0.1f);
 		notes_.insert(std::make_pair(noteNumber, sin)); 

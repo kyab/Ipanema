@@ -22,32 +22,32 @@ class ChordSyntaxError < StandardError; end
 def baseName2NoteNumber(baseName)
 	case baseName
 	when "E"
-		67
+		64
 	when "F"
-		68
+		65
 	when "F#","Gb"
-		69
+		66
 	when "G"
-		70
+		67
 	when "G#", "Ab"
-		71
+		68
 	when "A"
-		72
+		69
 	when "A#","Bb"
-		73
+		70
 	when "B"
-		74
+		71
 	when "C"
-		75
+		72
 	when "C#", "Db"
-		76
+		73
 	when "D", "D"
-		77
+		74
 	when "D#", "Eb"
-		78
+		75
 	else
 		raise "#{baseName} can't be recognized as base note name."
-	end
+	end - 12
 end
 
 class Chord

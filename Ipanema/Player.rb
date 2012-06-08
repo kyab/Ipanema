@@ -32,12 +32,9 @@ class Util
 	end
 end
 
-
-
 class ParseError < StandardError; end
 $notes = []
 $events = []
-
 
 class Player
 	def self.play
@@ -102,12 +99,16 @@ class Player
 		p $events.sort!	
 	end
 	
-
 	
 	def self.parseChords(str)
 		chords = ChordsExtractor.new(str).chords
 		$notes += chords2Notes(chords)
 	end
+	
+	def self.parseMML(str)
+		$notes += MMLParser.new(str).notes
+	end
+	
 		
 	
 	#super long and ugly function! REFACTOR ME!!!!!!
