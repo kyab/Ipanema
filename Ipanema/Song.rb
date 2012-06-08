@@ -5,7 +5,6 @@ require "Player.rb"
 #tempo(120)
 
 # テキスト音楽「サクラ」のMML
-
 mml ("o5l4 e4. c#8 c# <b8 >e2 c#8 c# <b4" <<
 	 "o5l4 e4. c#8 c# <b8 >e2 c#8 c#4 <b4" <<
 	">d4. <b8 b4 a8 >c#2 <a4 a4 g8 a1^1" << 
@@ -27,9 +26,7 @@ chords <<-END
 	EbM7  -  EbM7  -  Ab7(13)  -  Ab7(13)  
 	GbM7/Bb  -  GbM7/Bb  -  B7(13)  -  B7(13)  
 	
-	
-
-END
+	END
 	
 onTick(0) do 
 	puts "song started"

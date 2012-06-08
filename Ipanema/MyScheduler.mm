@@ -37,6 +37,4 @@ static MyScheduler *sharedMyScheduler = nil;
 	synth->noteOff(noteNumber);
 }
 
-
-
 @end
