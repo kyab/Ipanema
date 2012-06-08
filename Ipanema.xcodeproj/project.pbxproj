@@ -24,6 +24,7 @@
 		EB197EB11578FB3100BCD187 /* SoundDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = EB197EAE1578FB3100BCD187 /* SoundDelegate.mm */; };
 		EB197EB41578FB6700BCD187 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB197EB31578FB6700BCD187 /* AudioUnit.framework */; };
 		EB197EB61578FB7700BCD187 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB197EB51578FB7700BCD187 /* CoreAudio.framework */; };
+		EBA36A0D15825DBE00CA3A56 /* MMLParser.rb in Resources */ = {isa = PBXBuildFile; fileRef = EBA36A0C15825DBE00CA3A56 /* MMLParser.rb */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		EB197EAE1578FB3100BCD187 /* SoundDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SoundDelegate.mm; sourceTree = "<group>"; };
 		EB197EB31578FB6700BCD187 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
 		EB197EB51578FB7700BCD187 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		EBA36A0C15825DBE00CA3A56 /* MMLParser.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = MMLParser.rb; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				EB197E951577D25300BCD187 /* AppDelegate.rb */,
 				EB197E9F1577D27000BCD187 /* Controller.rb */,
 				EB0CCEDE1580DB2B004AA327 /* ChordParser.rb */,
+				EBA36A0C15825DBE00CA3A56 /* MMLParser.rb */,
 				EB0CCEE11580E466004AA327 /* BaseClasses.rb */,
 				EB0CCED8157FA448004AA327 /* Player.rb */,
 				EB0CCED5157FA0A1004AA327 /* Song.rb */,
@@ -221,6 +224,7 @@
 				EB0CCED9157FA448004AA327 /* Player.rb in Resources */,
 				EB0CCEDF1580DB2B004AA327 /* ChordParser.rb in Resources */,
 				EB0CCEE21580E466004AA327 /* BaseClasses.rb in Resources */,
+				EBA36A0D15825DBE00CA3A56 /* MMLParser.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

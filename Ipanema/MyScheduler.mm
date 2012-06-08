@@ -23,7 +23,9 @@ static MyScheduler *sharedMyScheduler = nil;
 -(void)setSoundDelegate : (SoundDelegate *)soundDelegate{
 	soundDelegate_ = soundDelegate;
 }
-
+-(id)soundDelegate{
+	return soundDelegate_;
+}
 
 -(void)noteOn:(int)noteNumber{
 	Synth *synth = [soundDelegate_ synth];
@@ -34,5 +36,7 @@ static MyScheduler *sharedMyScheduler = nil;
 	Synth *synth = [soundDelegate_ synth];
 	synth->noteOff(noteNumber);
 }
+
+
 
 @end

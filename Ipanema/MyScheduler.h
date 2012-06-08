@@ -12,4 +12,6 @@
 	id soundDelegate_;
 }
 
+-(id)soundDelegate;
+
 @end

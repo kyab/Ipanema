@@ -15,8 +15,7 @@ mml ("o5l4 e4. c#8 c# <b8 >e2 c#8 c# <b4" <<
 #TODO:
 chords <<-END
 	D69  -  D69  -  E7(9)  -  E7(9)  -  
-	Em7(9)  -  A7(13)  -
-	
+	Em7(9)  -  A7(13)  -  D69  -  Eb7(9)  
 END
 	
 onTick(0) do 
