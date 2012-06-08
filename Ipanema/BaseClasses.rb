@@ -1,3 +1,5 @@
+
+
 class Note 
 	attr_accessor :noteNumber , :length , :startTick
 	def initialize(noteNumber,length, startTick)
