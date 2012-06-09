@@ -58,7 +58,16 @@ private:
 
 };
 
-class SinWaveGenerator{
+class Generator{
+public:
+	virtual float gen() = 0;
+	virtual bool isOff() = 0;
+	virtual void off() = 0;
+	virtual bool isEnd() = 0;
+};
+
+
+class SinWaveGenerator : public Generator{
 public:
 	SinWaveGenerator(int freq, float gain) : upRamp_(0.002f), downRamp_(0.2f){
 		freq_ = freq;
@@ -116,10 +125,47 @@ private:
 	UpRamp upRamp_;
 };
 
+class TriangleGenerator : public Generator{
+public:
+	TriangleGenerator(int freq, float gain) {
+		freq_ = freq;
+		gain_ = gain;
+		frame_ = 0;
+		off_ = false;
+	}
+	
+	float gen(){
+		float sec = 1.0f * frame_++ / SAMPLING_RATE;	//OK
+		if (sec > 1/freq_) frame_ = 0 ;
+		
+		float val = gain_* freq_ * sec;
+		return val;
+	}
+	
+	bool isOff(){
+		return off_;
+	}
+	
+	void off(){
+		off_ = true;
+	}
+	
+	bool isEnd(){
+		return off_;
+	}
+
+private:
+	float gain_;
+	float frame_;
+	float freq_;
+	
+	bool off_;
+};
+
 class Synth{
 private:
-	std::multimap<Byte, SinWaveGenerator*> notes_;	//notes and sins pair
-	typedef std::multimap<Byte,SinWaveGenerator *>::iterator ite_type;
+	std::multimap<Byte, Generator *> notes_;	//notes and sins pair
+	typedef std::multimap<Byte,Generator *>::iterator ite_type;
 	
 public:
 	Synth(){}
@@ -140,8 +186,10 @@ public:
 		const float keisuu = 1.0594630943593f;
 		float freq = (float) (base * pow(keisuu,noteNumber - 57));
 		
-		SinWaveGenerator *sin = new SinWaveGenerator(freq, 0.1f);
-		notes_.insert(std::make_pair(noteNumber, sin)); 
+		//Generator *generator = new SinWaveGenerator(freq, 0.1f);
+		Generator *generator = new TriangleGenerator(freq, 0.1f);
+		notes_.insert(std::make_pair(noteNumber, generator));
+		
 		
 		//NSLog(@"notes count = %lu", notes_.size());
 		
@@ -153,9 +201,9 @@ public:
 		//offしていく。
 		std::pair< ite_type, ite_type> rangePair = notes_.equal_range(noteNumber);
 		for (ite_type ite = rangePair.first; ite != rangePair.second; ++ite){ 
-			SinWaveGenerator *sin = (*ite).second;
-			if (!sin->isOff()){
-				sin->off();
+			Generator *generator = (*ite).second;
+			if (!generator->isOff()){
+				generator->off();
 				break;
 			}
 		}
@@ -166,10 +214,10 @@ public:
 	void removeEndNotes(){
 		
 		for (ite_type it = notes_.begin(); it != notes_.end();){
-			SinWaveGenerator *sin = (*it).second;
-			if (sin->isEnd()){
+			Generator *generator = (*it).second;
+			if (generator->isEnd()){
 				//NSLog(@"detects dead note.");
-				delete sin;
+				delete generator;
 				notes_.erase(it++);
 				
 			}else{

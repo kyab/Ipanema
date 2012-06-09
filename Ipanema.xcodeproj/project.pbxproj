@@ -102,9 +102,9 @@
 			children = (
 				EB197E951577D25300BCD187 /* AppDelegate.rb */,
 				EB197E9F1577D27000BCD187 /* Controller.rb */,
+				EB0CCEE11580E466004AA327 /* BaseClasses.rb */,
 				EB0CCEDE1580DB2B004AA327 /* ChordParser.rb */,
 				EBA36A0C15825DBE00CA3A56 /* MMLParser.rb */,
-				EB0CCEE11580E466004AA327 /* BaseClasses.rb */,
 				EB0CCED8157FA448004AA327 /* Player.rb */,
 				EB0CCED5157FA0A1004AA327 /* Song.rb */,
 				EB197EA91578FB3100BCD187 /* MyScheduler.mm */,
