@@ -18,8 +18,8 @@ end
 #-------------------------------------------
 	
 	
-$scheduler = MyScheduler.sharedMyScheduler
-$scheduler.soundDelegate =SoundDelegate.new
+$track = MyTrack.sharedMyTrack
+$track.soundDelegate =SoundDelegate.new
 
 Thread.abort_on_exception = true #currently does not make a sense due to MacRuby's bug
 
@@ -29,7 +29,7 @@ class Controller
 		@audioEngine = AudioOutputEngine.new
 		@audioEngine.initCoreAudio
 		
-		@audioEngine.delegate = $scheduler.soundDelegate		
+		@audioEngine.delegate = $track.soundDelegate		
 		@audioEngine.start()
 
 	end

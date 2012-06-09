@@ -71,9 +71,9 @@ class Player
 					case @events[i]
 					when NoteEvent
 						if @events[i].type == :noteOn
-							$scheduler.noteOn(@events[i].noteNumber)
+							$track.noteOn(@events[i].noteNumber)
 						else #:noteOff
-							$scheduler.noteOff(@events[i].noteNumber)
+							$track.noteOff(@events[i].noteNumber)
 						end
 					when ProcEvent
 						@events[i].block.call

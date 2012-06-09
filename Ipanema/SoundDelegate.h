@@ -225,8 +225,6 @@ public:
 			}
 		}
 	}
-	
-
 };
 
 @interface SoundDelegate : NSObject{
