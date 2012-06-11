@@ -44,7 +44,7 @@
 		EB197E951577D25300BCD187 /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
 		EB197E9F1577D27000BCD187 /* Controller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Controller.rb; sourceTree = "<group>"; };
 		EB197EA91578FB3100BCD187 /* MyTrack.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyTrack.mm; sourceTree = "<group>"; };
-		EB197EAA1578FB3100BCD187 /* MyTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; path = MyTrack.h; sourceTree = "<group>"; };
+		EB197EAA1578FB3100BCD187 /* MyTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTrack.h; sourceTree = "<group>"; };
 		EB197EAB1578FB3100BCD187 /* AudioOutputEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioOutputEngine.m; sourceTree = "<group>"; };
 		EB197EAC1578FB3100BCD187 /* AudioOutputEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioOutputEngine.h; sourceTree = "<group>"; };
 		EB197EAD1578FB3100BCD187 /* SoundDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundDelegate.h; sourceTree = "<group>"; };

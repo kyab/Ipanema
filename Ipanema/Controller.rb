@@ -21,7 +21,7 @@ end
 $track = MyTrack.sharedMyTrack
 $track.soundDelegate =SoundDelegate.new
 
-Thread.abort_on_exception = true #currently does not make a sense due to MacRuby's bug
+Thread.abort_on_exception = true #currently does not make a sense due to MacRuby's bug.
 
 class Controller
 	def awakeFromNib

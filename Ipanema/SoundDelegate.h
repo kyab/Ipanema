@@ -162,6 +162,17 @@ private:
 	bool off_;
 };
 
+@interface Synth : NSObject{
+	std::multimap<Byte, Generator *> notes_;	//notes and sins pair
+}
+
+-(float)gen;
+-(void)noteOn:(Byte) noteNumber velocity:(Byte)velocity;
+-(void)noteOff:(Byte) noteNumber;
+-(void)removeEndNotes;
+
+@end
+/*
 class Synth{
 private:
 	std::multimap<Byte, Generator *> notes_;	//notes and sins pair
@@ -226,7 +237,7 @@ public:
 		}
 	}
 };
-
+*/
 @interface SoundDelegate : NSObject{
 	Synth *synth_;
 	

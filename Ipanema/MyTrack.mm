@@ -1,10 +1,4 @@
-//
-//  MyScheduler.m
-//  ChordPlayer
-//
-//  Created by 吉岡 紘二 on 12/05/13.
-//  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
-//
+
 
 #import "MyTrack.h"
 
@@ -29,12 +23,14 @@ static MyTrack *sharedMyTrack = nil;
 
 -(void)noteOn:(int)noteNumber{
 	Synth *synth = [soundDelegate_ synth];
-	synth->noteOn(noteNumber, 127);
+	//synth->noteOn(noteNumber, 127);
+	[synth noteOn:noteNumber velocity:127];
 }
 
 -(void)noteOff:(int)noteNumber{
 	Synth *synth = [soundDelegate_ synth];
-	synth->noteOff(noteNumber);
+	//synth->noteOff(noteNumber);
+	[synth noteOff:noteNumber];
 }
 
 @end

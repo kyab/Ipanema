@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "SoundDelegate.h"
+
 @interface MyTrack : NSObject{
 	id soundDelegate_;
 }
