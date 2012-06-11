@@ -18,8 +18,6 @@ static MyTrack *sharedMyTrack = nil;
 	self = [super init];
 	if (self != nil){
 		synth_ = [[Synth alloc] init];
-		GeneratorFactory *factory = [[SinWaveGeneratorFactory alloc] init];
-		[synth_ setGeneratorFactory :factory ];
 	}
 	return self;
 }

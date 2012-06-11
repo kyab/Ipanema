@@ -18,7 +18,12 @@ end
 #-------------------------------------------
 	
 	
+class MasterTrack < MyTrack
+	attr_accessor :tracks
+end
+	
 $track = MyTrack.sharedMyTrack
+$track.synth.setGeneratorFactory(SinWaveGeneratorFactory.new)
 
 Thread.abort_on_exception = true #currently does not make a sense due to MacRuby's bug.
 								 #so, exception in the thread does not raise until be joined. debug hell. oops!
