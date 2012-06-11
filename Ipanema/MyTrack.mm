@@ -18,28 +18,17 @@ static MyTrack *sharedMyTrack = nil;
 	self = [super init];
 	if (self != nil){
 		synth_ = [[Synth alloc] init];
+		GeneratorFactory *factory = [[SinWaveGeneratorFactory alloc] init];
+		[synth_ setGeneratorFactory :factory ];
 	}
 	return self;
 }
 
-/*
--(void)setSoundDelegate : (SoundDelegate *)soundDelegate{
-	soundDelegate_ = soundDelegate;
-}
--(id)soundDelegate{
-	return soundDelegate_;
-}
-*/
-
 -(void)noteOn:(int)noteNumber{
-	//Synth *synth = [soundDelegate_ synth];
-	//synth->noteOn(noteNumber, 127);
 	[synth_ noteOn:noteNumber velocity:127];
 }
 
 -(void)noteOff:(int)noteNumber{
-	//Synth *synth = [soundDelegate_ synth];
-	//synth->noteOff(noteNumber);
 	[synth_ noteOff:noteNumber];
 }
 

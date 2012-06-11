@@ -9,9 +9,37 @@
 #import "Synth.h"
 #include <math.h>
 
+
+@implementation GeneratorFactory
+/*
+-(Generator *)create :(int)freq gain:(float)gain{
+	return new Generator(freq, gain);
+}*/
+@end
+
+@implementation SinWaveGeneratorFactory
+-(Generator *)create :(int)freq gain:(float)gain{
+	return new SinWaveGenerator(freq, gain);
+}
+@end
+
+@implementation TriangleGeneratorFactory
+-(Generator *)create :(int)freq gain:(float)gain{
+	return new TriangleGenerator(freq, gain);
+}
+@end
+
+
+
 @implementation Synth
 
 typedef std::multimap<Byte,Generator *>::iterator ite_type;
+
+
+-(void)setGeneratorFactory:(GeneratorFactory *)generatorFactory{
+	generatorFactory_ = generatorFactory;
+}
+
 -(float)gen{
 	float val = 0.0f;
 	
@@ -27,7 +55,9 @@ typedef std::multimap<Byte,Generator *>::iterator ite_type;
 	float freq = (float) (base * pow(keisuu,noteNumber - 57));
 	
 	//Generator *generator = new SinWaveGenerator(freq, 0.1f);
-	Generator *generator = new TriangleGenerator(freq, 0.1f);
+	//Generator *generator = new TriangleGenerator(freq, 0.1f);
+	//Generataor *generator = generatorFactory_->create();
+	Generator *generator = [generatorFactory_ create:freq gain:0.1f];
 	notes_.insert(std::make_pair(noteNumber, generator));
 	
 	//NSLog(@"notes count = %lu", notes_.size());

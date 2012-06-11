@@ -162,10 +162,26 @@ private:
 	bool off_;
 };
 
+@interface GeneratorFactory : NSObject{
+}
+-(Generator *)create :(int)freq gain:(float)gain;
+@end
+
+@interface SinWaveGeneratorFactory : GeneratorFactory{
+}
+-(Generator *)create :(int)freq gain:(float)gain;
+@end
+
+@interface TriangleGeneratorFactory : GeneratorFactory{
+}
+-(Generator *)create :(int)freq gain:(float)gain;
+@end
+
 @interface Synth : NSObject{
 	std::multimap<Byte, Generator *> notes_;	//notes and sins pair
+	GeneratorFactory *generatorFactory_;
 }
-
+-(void)setGeneratorFactory:(GeneratorFactory *)generatorFactory;
 -(float)gen;
 -(void)noteOn:(Byte) noteNumber velocity:(Byte)velocity;
 -(void)noteOff:(Byte) noteNumber;
