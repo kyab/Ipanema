@@ -7,12 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SoundDelegate.h"
+#import "Synth.h"
+//#import "SoundDelegate.h"
 
 @interface MyTrack : NSObject{
-	id soundDelegate_;
+	//id soundDelegate_;
+	Synth *synth_;
 }
 
--(id)soundDelegate;
+//-(id)soundDelegate;
+-(Synth *)synth;
+-(float)gen;
 
 @end

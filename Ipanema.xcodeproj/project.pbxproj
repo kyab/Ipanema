@@ -25,6 +25,7 @@
 		EB197EB41578FB6700BCD187 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB197EB31578FB6700BCD187 /* AudioUnit.framework */; };
 		EB197EB61578FB7700BCD187 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB197EB51578FB7700BCD187 /* CoreAudio.framework */; };
 		EBA36A0D15825DBE00CA3A56 /* MMLParser.rb in Resources */ = {isa = PBXBuildFile; fileRef = EBA36A0C15825DBE00CA3A56 /* MMLParser.rb */; };
+		EBD2FE9C15861CB900D73764 /* Synth.mm in Sources */ = {isa = PBXBuildFile; fileRef = EBD2FE9B15861CB900D73764 /* Synth.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,8 @@
 		EB197EB31578FB6700BCD187 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
 		EB197EB51578FB7700BCD187 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		EBA36A0C15825DBE00CA3A56 /* MMLParser.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = MMLParser.rb; sourceTree = "<group>"; };
+		EBD2FE9A15861CB900D73764 /* Synth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Synth.h; sourceTree = "<group>"; };
+		EBD2FE9B15861CB900D73764 /* Synth.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Synth.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +110,10 @@
 				EBA36A0C15825DBE00CA3A56 /* MMLParser.rb */,
 				EB0CCED8157FA448004AA327 /* Player.rb */,
 				EB0CCED5157FA0A1004AA327 /* Song.rb */,
-				EB197EA91578FB3100BCD187 /* MyTrack.mm */,
 				EB197EAA1578FB3100BCD187 /* MyTrack.h */,
+				EB197EA91578FB3100BCD187 /* MyTrack.mm */,
+				EBD2FE9A15861CB900D73764 /* Synth.h */,
+				EBD2FE9B15861CB900D73764 /* Synth.mm */,
 				EB197EAB1578FB3100BCD187 /* AudioOutputEngine.m */,
 				EB197EAC1578FB3100BCD187 /* AudioOutputEngine.h */,
 				EB197EAD1578FB3100BCD187 /* SoundDelegate.h */,
@@ -239,6 +244,7 @@
 				EB197EAF1578FB3100BCD187 /* MyTrack.mm in Sources */,
 				EB197EB01578FB3100BCD187 /* AudioOutputEngine.m in Sources */,
 				EB197EB11578FB3100BCD187 /* SoundDelegate.mm in Sources */,
+				EBD2FE9C15861CB900D73764 /* Synth.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

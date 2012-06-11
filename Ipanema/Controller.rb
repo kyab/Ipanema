@@ -19,9 +19,9 @@ end
 	
 	
 $track = MyTrack.sharedMyTrack
-$track.soundDelegate =SoundDelegate.new
 
 Thread.abort_on_exception = true #currently does not make a sense due to MacRuby's bug.
+								 #so, exception in the thread does not raise until be joined. debug hell. oops!
 
 class Controller
 	def awakeFromNib
@@ -29,7 +29,7 @@ class Controller
 		@audioEngine = AudioOutputEngine.new
 		@audioEngine.initCoreAudio
 		
-		@audioEngine.delegate = $track.soundDelegate		
+		@audioEngine.delegate = SoundDelegate.new	
 		@audioEngine.start()
 
 	end

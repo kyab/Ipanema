@@ -10,6 +10,7 @@
 #include <CoreAudio/CoreAudio.h>
 #include <AudioUnit/AudioUnit.h>
 #include <AudioUnit/AUComponent.h>
+
 @interface AudioOutputEngine : NSObject
 {
 	AudioUnit outputUnit_;
