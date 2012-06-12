@@ -2,7 +2,7 @@ require "Controller.rb"
 require "Player.rb"
 
 #----------------------The Main Script goes here-----------------------
-#tempo(120)
+tempo(150)
 
 # テキスト音楽「サクラ」のMML
 mml ("o5l4 e4. c#8 c# <b8 >e2 c#8 c# <b4" <<

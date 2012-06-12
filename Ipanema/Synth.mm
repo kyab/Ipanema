@@ -56,7 +56,6 @@ typedef std::multimap<Byte,Generator *>::iterator ite_type;
 	
 	//Generator *generator = new SinWaveGenerator(freq, 0.1f);
 	//Generator *generator = new TriangleGenerator(freq, 0.1f);
-	//Generataor *generator = generatorFactory_->create();
 	Generator *generator = [generatorFactory_ create:freq gain:0.1f];
 	notes_.insert(std::make_pair(noteNumber, generator));
 	

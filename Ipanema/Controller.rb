@@ -1,6 +1,10 @@
 
 
 #-------------------DSL----------------------
+def tempo(tempo)
+	Player.instance.tempo = tempo
+end
+
 def onTick(tick, &block)
 	Player.instance.addEvent(tick, block)
 end

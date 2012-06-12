@@ -39,6 +39,8 @@ class ParseError < StandardError; end
 class Player
 	include Singleton
 	
+	attr_accessor :tempo
+	
 	def initialize
 		@notes = []
 		@events = []
@@ -64,7 +66,8 @@ class Player
 		i = 0
 		lastNoteNumber = -1
 		while (i < @events.size)
-			elapsed_tick = (Time.now - t)* 96 * 2.0
+			elapsed_second = (Time.now - t)
+			elapsed_tick = elapsed_second  * @tempo/60 * 96
 			while(i < @events.size)
 				if @events[i].tick < elapsed_tick
 
