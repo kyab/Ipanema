@@ -21,9 +21,10 @@ def chords(str)
 end
 #-------------------------------------------
 	
-	
-$track = Track.sharedTrack
-$track.synth.setGeneratorFactory(SinWaveGeneratorFactory.new)
+$track1 = Track.new
+$track1.synth.setGeneratorFactory(SinWaveGeneratorFactory.new)
+MasterTrack.sharedMasterTrack.tracks.addObject($track1)
+
 
 Thread.abort_on_exception = true #currently does not make a sense due to MacRuby's bug.
 								 #so, exception in the thread does not raise until be joined. debug hell. oops!
@@ -34,7 +35,7 @@ class Controller
 		@audioEngine = AudioOutputEngine.new
 		@audioEngine.initCoreAudio
 	
-		@audioEngine.delegate = $track
+		@audioEngine.delegate = MasterTrack.sharedMasterTrack
 		@audioEngine.start()
 
 	end

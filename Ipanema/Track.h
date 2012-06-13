@@ -16,6 +16,12 @@
 -(Synth *)synth;
 -(float)gen;
 
+@end
+
+@interface MasterTrack : NSObject{
+	NSMutableArray *tracks_;
+}
 //AudioOutputEngine delegation
 -(void)audioEngineBufferRequired:(UInt32)sampleNum left:(SInt16 *)pLeft right:(SInt16 *)pRight;
+-(NSMutableArray *)tracks;
 @end

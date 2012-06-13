@@ -4,16 +4,6 @@
 
 @implementation Track
 
-static Track *sharedTrack = nil;
-
-//This class is Singleton
-+(id)sharedTrack{
-	if (sharedTrack == nil){
-		sharedTrack = [[self alloc] init];
-	}
-	return sharedTrack;
-}
-
 -(id)init{
 	self = [super init];
 	if (self != nil){
@@ -34,25 +24,56 @@ static Track *sharedTrack = nil;
 	return [synth_ gen];
 }
 
-
 -(Synth *)synth{
 	return synth_;
 }
 
--(void)audioEngineBufferRequired:(UInt32)sampleNum left:(SInt16 *)pLeft right:(SInt16 *)pRight;
-{
+@end
 
-	for (UInt32 i = 0 ; i < sampleNum ; i++){
-		float val = [self gen];
-		SInt16 sint16val = val * SHRT_MAX;
-		
-		pLeft[i] = sint16val;
-		pRight[i] = sint16val;
+
+static MasterTrack *sharedMasterTrack = nil;
+
+
+@implementation MasterTrack
+
+//This class is Singleton
++(id)sharedMasterTrack{
+	if (sharedMasterTrack == nil){
+		sharedMasterTrack = [[self alloc] init];
 	}
-	[synth_ removeEndNotes];
+	return sharedMasterTrack;
+}
+
+-(id)init{
+	self = [super init];
+	if (self != nil){
+		tracks_ = [[NSMutableArray alloc] init];
+	}
+	return self;
 }
 
 
 
+-(void)audioEngineBufferRequired:(UInt32)sampleNum left:(SInt16 *)pLeft right:(SInt16 *)pRight;
+{
+	for (UInt32 i = 0 ; i < sampleNum; i++){
+		float val = 0 ;
+		for (id track in tracks_){
+			val += [track gen];
+		}
+		SInt16 sint16val = val * SHRT_MAX;
+		pLeft[i] = sint16val;
+		pRight[i] = sint16val;
+	}
+	
+	for (id track in tracks_){
+		[[track synth] removeEndNotes];
+	}
+}
+
+-(NSMutableArray *)tracks{
+	return tracks_;
+}
 
 @end
+
