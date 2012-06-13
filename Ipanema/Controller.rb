@@ -22,11 +22,7 @@ end
 #-------------------------------------------
 	
 	
-class MasterTrack < MyTrack
-	attr_accessor :tracks
-end
-	
-$track = MyTrack.sharedMyTrack
+$track = Track.sharedTrack
 $track.synth.setGeneratorFactory(SinWaveGeneratorFactory.new)
 
 Thread.abort_on_exception = true #currently does not make a sense due to MacRuby's bug.
@@ -37,8 +33,8 @@ class Controller
 		
 		@audioEngine = AudioOutputEngine.new
 		@audioEngine.initCoreAudio
-		
-		@audioEngine.delegate = SoundDelegate.new	
+	
+		@audioEngine.delegate = $track
 		@audioEngine.start()
 
 	end
